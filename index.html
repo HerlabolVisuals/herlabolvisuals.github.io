@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Herlabol Visuals</title>
+<meta name="description" content="Herlabol Visuals — 1500+ motion graphics reels bundle, editing pack and graphic design pack, 100% free to download.">
+
+<link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=12rg8vrhPV4Cq0iQ42p00adI4nf-nnTrw&sz=w64">
+<link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=12rg8vrhPV4Cq0iQ42p00adI4nf-nnTrw&sz=w180">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0A0A0F;
+  --bg-soft:#111118;
+  --surface: rgba(255,255,255,0.045);
+  --surface-hi: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.09);
+  --border-hi: rgba(255,255,255,0.18);
+  --text:#F3F2F8;
+  --text-dim:#9694A6;
+  --text-faint:#635F73;
+
+  --violet:#8B5CF6;
+  --pink:#F0498B;
+  --amber:#FFB454;
+  --teal:#2DD4BF;
+  --red:#F87171;
+  --blue:#60A5FA;
+
+  --grad: linear-gradient(120deg, var(--violet) 0%, var(--pink) 55%, var(--amber) 100%);
+  --grad-soft: linear-gradient(120deg, rgba(139,92,246,.18), rgba(240,73,139,.18) 55%, rgba(255,180,84,.18));
+
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --ease: cubic-bezier(.16,.84,.44,1);
+  --shadow-lg: 0 20px 60px -20px rgba(0,0,0,.6);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  line-height:1.5;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%; display:block;}
+a{color:inherit; text-decoration:none;}
+button{font:inherit; color:inherit; background:none; border:none; cursor:pointer;}
+[data-lucide]{width:1em; height:1em; stroke-width:2;}
+::selection{background:var(--pink); color:#fff;}
+
+::-webkit-scrollbar{width:10px; height:10px;}
+::-webkit-scrollbar-track{background:var(--bg-soft);}
+::-webkit-scrollbar-thumb{background:var(--border-hi); border-radius:10px;}
+
+/* ============ AMBIENT BG ============ */
+.ambient{position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none;}
+.blob{position:absolute; border-radius:50%; filter:blur(90px); opacity:.35; will-change:transform;}
+.blob-1{width:520px; height:520px; background:var(--violet); top:-160px; left:-120px; animation:float1 22s ease-in-out infinite;}
+.blob-2{width:460px; height:460px; background:var(--pink); top:20%; right:-160px; animation:float2 26s ease-in-out infinite;}
+.blob-3{width:420px; height:420px; background:var(--amber); bottom:-180px; left:30%; animation:float3 30s ease-in-out infinite;}
+@keyframes float1{0%,100%{transform:translate(0,0)} 50%{transform:translate(80px,60px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)} 50%{transform:translate(-70px,80px)}}
+@keyframes float3{0%,100%{transform:translate(0,0)} 50%{transform:translate(50px,-70px)}}
+.grain{position:absolute; inset:0; opacity:.03; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ============ TYPE ============ */
+h1,h2,h3,.brand-name{font-family:var(--font-display); font-weight:700; letter-spacing:-.02em;}
+.grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; background-size:200% 200%; animation:gradShift 6s ease infinite;}
+@keyframes gradShift{0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}}
+
+.eyebrow{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--text-dim); margin-bottom:16px;}
+.eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--grad); box-shadow:0 0 12px var(--pink); animation:pulseDot 2s ease-in-out infinite;}
+@keyframes pulseDot{0%,100%{opacity:1; transform:scale(1)} 50%{opacity:.5; transform:scale(1.3)}}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex; align-items:center; gap:10px; padding:14px 24px; border-radius:100px; font-weight:600; font-size:.95rem; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease); white-space:nowrap;}
+.btn [data-lucide]{width:18px; height:18px;}
+.btn-primary{background:var(--grad); color:#0A0A0F; background-size:200% auto; box-shadow:0 8px 30px -8px rgba(240,73,139,.5);}
+.btn-primary:hover{background-position:right center; transform:translateY(-2px); box-shadow:0 14px 36px -8px rgba(240,73,139,.65);}
+.btn-outline{border:1px solid var(--border-hi); color:var(--text);}
+.btn-outline:hover{background:var(--surface-hi); transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--border); color:var(--text-dim); font-size:.85rem; padding:9px 16px;}
+.btn-ghost:hover{color:var(--text); border-color:var(--border-hi); background:var(--surface);}
+.btn-block{width:100%; justify-content:center;}
+.btn-sm{padding:9px 16px; font-size:.85rem;}
+
+.icon-btn{width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:var(--surface); border:1px solid var(--border); color:var(--text-dim); transition:all .25s var(--ease); flex-shrink:0;}
+.icon-btn:hover{color:var(--text); background:var(--surface-hi); border-color:var(--border-hi); transform:scale(1.06);}
+.icon-btn.active{color:var(--amber); border-color:var(--amber); background:rgba(255,180,84,.12);}
+
+/* ============ NAV ============ */
+.nav{position:fixed; top:0; left:0; right:0; z-index:100; padding:16px 24px;}
+.nav-inner{max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:10px 18px; border-radius:100px; background:rgba(10,10,15,.6); border:1px solid var(--border); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); transition:border-color .3s;}
+
+.brand{display:flex; align-items:center; gap:10px;}
+.brand-logo{width:34px; height:34px; border-radius:9px; object-fit:cover; box-shadow:0 0 0 1px var(--border-hi);}
+.brand-name{font-size:1.05rem; color:var(--text);}
+.brand-name em{font-style:normal; background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+
+.nav-links{display:flex; align-items:center; gap:28px; font-size:.9rem; font-weight:500; color:var(--text-dim);}
+.nav-links a, .nav-link-btn{position:relative; display:inline-flex; align-items:center; gap:6px; transition:color .25s;}
+.nav-links a:hover, .nav-link-btn:hover{color:var(--text);}
+.nav-link-btn [data-lucide]{width:15px; height:15px;}
+.fav-count{background:var(--grad); color:#0A0A0F; font-family:var(--font-mono); font-size:.68rem; font-weight:700; padding:1px 6px; border-radius:20px; min-width:18px; text-align:center;}
+
+.nav-actions{display:flex; align-items:center; gap:10px;}
+.nav-actions .btn-ghost span{display:inline;}
+
+.hamburger{display:none; flex-direction:column; gap:5px; width:36px; height:36px; align-items:center; justify-content:center;}
+.hamburger span{width:20px; height:2px; background:var(--text); border-radius:2px; transition:transform .3s var(--ease), opacity .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.mobile-menu{position:fixed; top:78px; left:16px; right:16px; z-index:99; background:rgba(14,14,20,.96); border:1px solid var(--border); border-radius:20px; backdrop-filter:blur(20px); padding:10px; display:flex; flex-direction:column; gap:2px; transform:translateY(-14px) scale(.98); opacity:0; pointer-events:none; transition:all .3s var(--ease); box-shadow:var(--shadow-lg);}
+.mobile-menu.open{transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
+.mobile-menu a, .mobile-menu button{padding:14px 16px; border-radius:12px; font-weight:500; text-align:left; display:flex; justify-content:space-between; align-items:center;}
+.mobile-menu a:hover, .mobile-menu button:hover{background:var(--surface);}
+
+/* ============ HERO ============ */
+.hero{position:relative; padding:170px 24px 0; max-width:1280px; margin:0 auto;}
+.hero-inner{max-width:780px;}
+.hero-title{font-size:clamp(2.6rem, 6.2vw, 4.6rem); line-height:1.04; margin-bottom:22px;}
+.hero-sub{font-size:clamp(1rem, 1.6vw, 1.18rem); color:var(--text-dim); max-width:600px; margin-bottom:34px;}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:56px;}
+
+.hero-stats{display:flex; flex-wrap:wrap; gap:44px; padding-top:28px; border-top:1px solid var(--border);}
+.stat{display:flex; flex-direction:column;}
+.stat-num{font-family:var(--font-display); font-size:1.9rem; font-weight:700;}
+.stat-label{font-size:.8rem; color:var(--text-faint); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em;}
+
+.marquee{margin-top:64px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); overflow:hidden; padding:16px 0; background:var(--surface);}
+.marquee-track{display:flex; gap:20px; width:max-content; animation:marquee 26s linear infinite; font-family:var(--font-mono); font-size:.85rem; letter-spacing:.06em; color:var(--text-dim); white-space:nowrap;}
+.marquee-track span{padding:0 4px;}
+.marquee-track .sep{color:var(--pink);}
+@keyframes marquee{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+
+/* ============ REVEAL ANIM ============ */
+[data-reveal]{opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+[data-reveal].in-view{opacity:1; transform:translateY(0);}
+
+/* ============ BUNDLES ============ */
+.bundles{max-width:1280px; margin:0 auto; padding:130px 24px 60px;}
+.section-head{max-width:640px; margin-bottom:52px;}
+.section-head h2{font-size:clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom:14px;}
+.section-sub{color:var(--text-dim); font-size:1.02rem;}
+
+.bundle-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:26px;}
+.bundle-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; transition:transform .45s var(--ease), border-color .45s var(--ease), box-shadow .45s var(--ease);}
+.bundle-card:hover{transform:translateY(-8px); border-color:var(--border-hi); box-shadow:var(--shadow-lg);}
+
+.bundle-thumb{position:relative; aspect-ratio:1/1; overflow:hidden; background:var(--bg-soft);}
+.bundle-thumb img{width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease);}
+.bundle-card:hover .bundle-thumb img{transform:scale(1.06);}
+.bundle-thumb::after{content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,15,.85), transparent 45%);}
+.bundle-badge{position:absolute; top:14px; left:14px; z-index:2; display:flex; align-items:center; gap:6px; padding:7px 13px; border-radius:100px; background:rgba(10,10,15,.65); border:1px solid var(--border-hi); backdrop-filter:blur(8px); font-size:.76rem; font-family:var(--font-mono); font-weight:500;}
+.bundle-badge [data-lucide]{width:13px; height:13px; color:var(--amber);}
+
+.bundle-body{padding:22px;}
+.bundle-body h3{font-size:1.2rem; margin-bottom:8px;}
+.bundle-body p{color:var(--text-dim); font-size:.9rem; margin-bottom:18px; min-height:42px;}
+
+/* ============ FOOTER ============ */
+.footer{max-width:1280px; margin:0 auto; padding:60px 24px 30px;}
+.footer-inner{display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; padding-bottom:34px; border-bottom:1px solid var(--border);}
+.footer-brand{display:flex; align-items:center; gap:14px;}
+.footer-brand img{width:46px; height:46px; border-radius:12px; box-shadow:0 0 0 1px var(--border-hi);}
+.footer-brand p{color:var(--text-faint); font-size:.85rem; margin-top:4px;}
+.footer-contact{display:flex; flex-direction:column; gap:12px;}
+.contact-link{display:flex; align-items:center; gap:10px; color:var(--text-dim); font-size:.92rem; transition:color .25s, transform .25s;}
+.contact-link:hover{color:var(--text); transform:translateX(4px);}
+.contact-link [data-lucide]{width:17px; height:17px; color:var(--pink);}
+.footer-bottom{padding-top:22px; text-align:center; font-size:.78rem; color:var(--text-faint); font-family:var(--font-mono);}
+
+/* ============ OVERLAYS (Browser / Favorites) ============ */
+.overlay{position:fixed; inset:0; z-index:200; background:var(--bg); opacity:0; pointer-events:none; transform:translateY(24px); transition:opacity .4s var(--ease), transform .4s var(--ease); overflow-y:auto;}
+.overlay.open{opacity:1; pointer-events:auto; transform:translateY(0);}
+.overlay-inner{max-width:1280px; margin:0 auto; padding:24px 24px 80px;}
+
+.overlay-head{position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px; padding:14px 0; background:linear-gradient(var(--bg) 70%, transparent);}
+.breadcrumbs{flex:1; display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:.92rem; color:var(--text-dim); overflow:hidden;}
+.breadcrumbs button{color:var(--text-dim); display:flex; align-items:center; gap:5px; padding:4px 6px; border-radius:8px; transition:color .2s, background .2s;}
+.breadcrumbs button:hover{color:var(--text); background:var(--surface);}
+.breadcrumbs button.current{color:var(--text); font-weight:600;}
+.breadcrumbs .crumb-sep{color:var(--text-faint);}
+.breadcrumbs [data-lucide]{width:15px; height:15px;}
+
+/* SEARCH BAR STYLES */
+.search-container{margin:18px 0 28px; position:relative; max-width:440px;}
+.search-wrapper{position:relative; display:flex; align-items:center;}
+.search-icon{position:absolute; left:16px; color:var(--text-faint); transition:color .3s; pointer-events:none; width:18px; height:18px;}
+.search-input{width:100%; padding:13px 44px 13px 48px; background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:100px; color:var(--text); font-family:var(--font-body); font-size:.92rem; outline:none; transition:all .3s var(--ease);}
+.search-input:focus{background:rgba(255,255,255,0.06); border-color:var(--pink); box-shadow:0 0 20px -5px rgba(240,73,139,0.25);}
+.search-input:focus + .search-icon{color:var(--pink);}
+.search-clear{position:absolute; right:16px; color:var(--text-faint); cursor:pointer; display:none; align-items:center; justify-content:center; padding:4px; border-radius:50%; transition:all .2s;}
+.search-clear:hover{color:var(--text); background:var(--surface-hi);}
+.search-clear [data-lucide]{width:14px; height:14px;}
+
+.overlay-status{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:80px 0; color:var(--text-dim); text-align:center;}
+.overlay-status.hidden{display:none;}
+.spinner{width:34px; height:34px; border-radius:50%; border:3px solid var(--border); border-top-color:var(--pink); animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.overlay-status [data-lucide]{width:34px; height:34px; color:var(--text-faint);}
+.status-title{font-family:var(--font-display); font-weight:600; color:var(--text); font-size:1.05rem;}
+
+/* ============ FILE GRID ============ */
+.file-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:16px;}
+
+.file-card{position:relative; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; transition:transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease); opacity:0; animation:cardIn .5s var(--ease) forwards;}
+@keyframes cardIn{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:translateY(0)}}
+.file-card:hover{transform:translateY(-4px); border-color:var(--border-hi); box-shadow:var(--shadow-lg);}
+
+/* Dynamic Natural Aspect Ratio Preview for Images & Videos */
+.file-thumb{position:relative; display:grid; place-items:center; background:var(--bg-soft); overflow:hidden; cursor:pointer;}
+.file-thumb img{width:100%; height:auto; max-height:100%; object-fit:contain;}
+.file-thumb .type-icon{width:38px; height:38px;}
+
+/* Specific default box size fallback when icon is rendering instead of thumbnail */
+.file-thumb:not(:has(img)) { aspect-ratio: 1/1; }
+
+.type-folder .type-icon{color:var(--amber);}
+.type-video .type-icon{color:var(--pink);}
+.type-image .type-icon{color:var(--violet);}
+.type-audio .type-icon{color:var(--teal);}
+.type-pdf .type-icon{color:var(--red);}
+.type-font .type-icon{color:var(--blue);}
+.type-archive .type-icon{color:#C9A0FF;}
+.type-other .type-icon{color:var(--text-faint);}
+
+.file-thumb .play-hint{position:absolute; inset:0; display:grid; place-items:center; background:rgba(10,10,15,0); transition:background .3s;}
+.file-thumb:hover .play-hint{background:rgba(10,10,15,.35);}
+.play-hint [data-lucide]{width:32px; height:32px; opacity:0; transform:scale(.7); transition:all .3s var(--ease); color:#fff; filter:drop-shadow(0 4px 12px rgba(0,0,0,.5));}
+.file-thumb:hover .play-hint [data-lucide]{opacity:1; transform:scale(1);}
+
+@media (max-width:760px){
+  .search-container{max-width:100%; margin-bottom:20px;}
+}
+
+/* Shortcuts now look identical to standard files without separate layout hints */
+.shortcut-badge{display: none !important;}
+
+.file-info{padding:12px 12px 14px;}
+.file-name{font-size:.86rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px;}
+.file-meta{font-size:.72rem; color:var(--text-faint); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.03em;}
+
+.file-actions{display:flex; gap:6px; padding:0 12px 12px;}
+.file-actions .icon-btn{width:32px; height:32px;}
+.file-actions .icon-btn [data-lucide]{width:15px; height:15px;}
+.fav-btn.is-fav{color:var(--amber); border-color:var(--amber); background:rgba(255,180,84,.12);}
+.fav-btn.is-fav [data-lucide]{fill:var(--amber);}
+
+/* ============ MODAL ============ */
+.modal{position:fixed; inset:0; z-index:300; display:grid; place-items:center; padding:24px; opacity:0; pointer-events:none; transition:opacity .35s var(--ease);}
+.modal.open{opacity:1; pointer-events:auto;}
+.modal-backdrop{position:absolute; inset:0; background:rgba(6,6,10,.82); backdrop-filter:blur(6px);}
+.modal-panel{position:relative; width:min(880px, 100%); max-height:88vh; background:var(--bg-soft); border:1px solid var(--border-hi); border-radius:var(--radius-lg); overflow:hidden; display:flex; flex-direction:column; transform:scale(.94) translateY(10px); transition:transform .35s var(--ease); box-shadow:var(--shadow-lg);}
+.modal.open .modal-panel{transform:scale(1) translateY(0);}
+.modal-head{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:16px 18px; border-bottom:1px solid var(--border);}
+.modal-name{font-weight:600; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.modal-actions{display:flex; gap:8px; flex-shrink:0;}
+.modal-body{padding:20px; overflow:auto; display:grid; place-items:center; min-height:220px;}
+.modal-body img, .modal-body video{max-width:100%; max-height:64vh; border-radius:12px; display:block;}
+.modal-body audio{width:100%; min-width:280px;}
+.modal-body iframe{width:100%; height:64vh; border:none; border-radius:12px; background:#fff;}
+.font-preview{width:100%; text-align:center; padding:30px 10px;}
+.font-preview .sample-lg{font-size:clamp(2rem,5vw,3.2rem); margin-bottom:14px; word-break:break-word;}
+.font-preview .sample-sm{color:var(--text-dim); font-size:1rem;}
+.unsupported-preview{display:flex; flex-direction:column; align-items:center; gap:14px; color:var(--text-dim); text-align:center; padding:30px;}
+.unsupported-preview [data-lucide]{width:44px; height:44px; color:var(--text-faint);}
+
+/* ============ TOASTS ============ */
+.toast-stack{position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:400; display:flex; flex-direction:column; gap:10px; align-items:center; pointer-events:none;}
+.toast{display:flex; align-items:center; gap:10px; padding:12px 18px; border-radius:100px; background:rgba(20,20,28,.92); border:1px solid var(--border-hi); backdrop-filter:blur(12px); font-size:.86rem; box-shadow:var(--shadow-lg); animation:toastIn .35s var(--ease); }
+.toast [data-lucide]{width:16px; height:16px; color:var(--teal);}
+.toast.err [data-lucide]{color:var(--red);}
+@keyframes toastIn{from{opacity:0; transform:translateY(14px) scale(.95)} to{opacity:1; transform:translateY(0) scale(1)}}
+.toast.leaving{animation:toastOut .3s var(--ease) forwards;}
+@keyframes toastOut{to{opacity:0; transform:translateY(8px) scale(.96)}}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:960px){
+  .bundle-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:760px){
+  .nav-links{display:none;}
+  .nav-actions .btn-ghost span{display:none;}
+  .hamburger{display:flex;}
+  .hero{padding-top:140px;}
+  .hero-stats{gap:28px;}
+  .bundle-grid{grid-template-columns:1fr;}
+  .footer-inner{flex-direction:column;}
+  .file-grid{grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px;}
+}
+
+@media (max-width:480px){
+  .nav-inner{padding:8px 10px;}
+  .brand-name{font-size:.92rem;}
+  .modal-body iframe, .modal-body video{height:44vh;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- Ambient background -->
+<div class="ambient" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="https://drive.google.com/thumbnail?id=12rg8vrhPV4Cq0iQ42p00adI4nf-nnTrw&sz=w128" alt="Herlabol Visuals logo" class="brand-logo" onerror="this.style.display='none'">
+      <span class="brand-name">Herlabol<em>Visuals</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#top" data-nav>Home</a>
+      <a href="#bundles" data-nav>Bundles</a>
+      <button class="nav-link-btn" id="favNavBtn">
+        <i data-lucide="star"></i> Favorites <span class="fav-count" id="favCount">0</span>
+      </button>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Changed from WhatsApp to Google Drive Button -->
+      <a class="btn btn-ghost btn-sm" href="https://drive.google.com/drive/folders/1Vi-oeR7YwoyriQ1Y6sD4ofBTsGe5zDrB" target="_blank" rel="noopener">
+        <i data-lucide="hard-drive"></i><span>Google Drive</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#top" data-nav>Home</a>
+  <a href="#bundles" data-nav>Bundles</a>
+  <button id="favNavBtnMobile">Favorites <span class="fav-count" id="favCountMobile">0</span></button>
+  <a href="#contact" data-nav>Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow" data-reveal><span class="dot"></span> 100% Free - No Signup - No Ads</p>
+      <h1 class="hero-title" data-reveal>
+        Herlabol Visuals<br>
+        <span class="grad-text">Digital Assets</span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        Herlabol Visuals Is Non-Profitable Website Which Is Helpful For Editors, Graphic Designers, Content Creators Etc. Herlabol Visuals Is Owned By Herlabol AKA Mohammad Maaz. 
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a href="#bundles" class="btn btn-primary">
+          <i data-lucide="layout-grid"></i><span>Browse Bundles</span>
+        </a>
+        <!-- Fixed Instagram Embed Icon -->
+        <a href="https://instagram.com/herlabol_gaming" target="_blank" rel="noopener" class="btn btn-outline">
+          <i data-lucide="instagram"></i><span>@herlabol_gaming</span>
+        </a>
+      </div>
+
+      <div class="hero-stats" data-reveal>
+        <div class="stat"><span class="stat-num">Editing</span><span class="stat-label">Assets</span></div>
+        <div class="stat"><span class="stat-num">Graphic Design</span><span class="stat-label">Assets</span></div>
+        <div class="stat"><span class="stat-num">1500+</span><span class="stat-label">Motion Graphics Reels</span></div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>100% Free</span><span class="sep">✦</span>
+        <span>No Ads</span><span class="sep">✦</span>
+        <span>No Sign Up</span><span class="sep">✦</span>
+        <span>100% Free</span><span class="sep">✦</span>
+        <span>No Ads</span><span class="sep">✦</span>
+        <span>No Sign Up</span><span class="sep">✦</span>
+        <span>100% Free</span><span class="sep">✦</span>
+        <span>One Click Download</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </section>
+
+<!-- BUNDLES -->
+  <section class="bundles" id="bundles">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="dot"></span> All Bundles</p>
+      <h2>Pick A Bundle, Preview Files, Download Instantly.</h2>
+      <p class="section-sub"> 1500+ Motion Graphics Reels Was Copyright Free And Ready To Use In YouTube, Instagram Etc. Editing & Graphic Design Assets Was Also Copyright Free And You Can Use It In Any Video.</p>
+    </div>
+
+    <div class="bundle-grid">
+      <article class="bundle-card" data-reveal data-bundle="motion">
+        <div class="bundle-thumb">
+          <img src="https://drive.google.com/thumbnail?id=1PU_dBRrHPKjSeVZLA0ZBfickUCzjoOLC&sz=w800" alt="1500+ Motion Graphics Reels Bundle thumbnail" loading="lazy">
+          <span class="bundle-badge"><i data-lucide="film"></i> 1500+ Reels</span>
+        </div>
+        <div class="bundle-body">
+          <h3>Motion Graphics Reels Bundle</h3>
+          <p>1500+ Ready To Upload Motion Graphics Reels For Instagram, YouTube Shorts And More.</p>
+          <button class="btn btn-primary btn-block open-bundle" data-bundle="motion">
+            <i data-lucide="folder-open"></i><span>Open Bundle</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="bundle-card" data-reveal data-bundle="editing">
+        <div class="bundle-thumb">
+          <img src="https://drive.google.com/thumbnail?id=1FtEBIDy-NLNp1ArqaCME7hS9sAmLj5-I&sz=w800" alt="Editing Pack thumbnail" loading="lazy">
+          <span class="bundle-badge"><i data-lucide="scissors"></i> Editing Pack</span>
+        </div>
+        <div class="bundle-body">
+          <h3>Editing Pack</h3>
+          <p>Alight Motion Templates, Transitions, Overlays, Green Screen Videos, Sound Effects, Background Musics And Many More</p>
+          <button class="btn btn-primary btn-block open-bundle" data-bundle="editing">
+            <i data-lucide="folder-open"></i><span>Open Pack</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="bundle-card" data-reveal data-bundle="graphic">
+        <div class="bundle-thumb">
+          <img src="https://drive.google.com/thumbnail?id=1ZXuIPY8rdci3QaRUHyIkXLkUPbvzqHNT&sz=w800" alt="Graphic Design Pack thumbnail" loading="lazy">
+          <span class="bundle-badge"><i data-lucide="palette"></i> Graphic Design Pack</span>
+        </div>
+        <div class="bundle-body">
+          <h3>Graphic Design Pack</h3>
+          <p>Fonts, PSD Templates, PNGs, Pixellab Templates, PhotoShop Plugins, Backgrounds And Many More Design Assets To Build Your Visual Identity.</p>
+          <button class="btn btn-primary btn-block open-bundle" data-bundle="graphic">
+            <i data-lucide="folder-open"></i><span>Open Pack</span>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="https://drive.google.com/thumbnail?id=12rg8vrhPV4Cq0iQ42p00adI4nf-nnTrw&sz=w128" alt="Herlabol Visuals logo" onerror="this.style.display='none'">
+        <div>
+          <span class="brand-name">Herlabol<em>Visuals</em></span>
+          <p> If You Have Any Problems Related To Downloading Assets So You Can Contact Us &amp; If You Found Any Bug Please Contact Us To Fix Issues.</p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <a href="mailto:workzbymaaz@gmail.com" class="contact-link">
+          <i data-lucide="mail"></i><span>workzbymaaz@gmail.com</span>
+        </a>
+        <a href="https://wa.me/919927747063" target="_blank" rel="noopener" class="contact-link">
+          <i data-lucide="message-circle"></i><span>+91 99277 47063</span>
+        </a>
+        <a href="https://instagram.com/the_.maaz" target="_blank" rel="noopener" class="contact-link">
+          <i data-lucide="instagram"></i><span>@the_.maaz</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>  <span id="year"></span> </span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- BROWSER OVERLAY -->
+<section class="overlay" id="browserOverlay" aria-hidden="true">
+  <div class="overlay-inner">
+    <header class="overlay-head">
+      <button class="icon-btn" id="closeBrowser" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="breadcrumbs" id="breadcrumbs"></div>
+      <button class="icon-btn" id="refreshFolder" aria-label="Refresh">
+        <i data-lucide="refresh-cw"></i>
+      </button>
+    </header>
+
+    <div class="search-container">
+      <div class="search-wrapper">
+        <input type="text" id="overlaySearch" class="search-input" placeholder="Search files or packs...">
+        <i data-lucide="search" class="search-icon"></i>
+        <button id="clearSearch" class="search-clear" aria-label="Clear Search">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay-status" id="overlayStatus"></div>
+
+    <div class="file-grid" id="fileGrid"></div>
+  </div>
+</section>
+
+<!-- FAVORITES OVERLAY -->
+<section class="overlay" id="favoritesOverlay" aria-hidden="true">
+  <div class="overlay-inner">
+    <header class="overlay-head">
+      <button class="icon-btn" id="closeFavorites" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="breadcrumbs"><i data-lucide="star"></i><span>Your Favorites</span></div>
+      <span style="width:44px"></span>
+    </header>
+    <div class="file-grid" id="favoritesGrid"></div>
+  </div>
+</section>
+
+<!-- PREVIEW MODAL -->
+<div class="modal" id="previewModal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-panel">
+    <div class="modal-head">
+      <span class="modal-name" id="modalName"></span>
+      <div class="modal-actions">
+        <button class="icon-btn" id="modalFav" aria-label="Favorite"><i data-lucide="star"></i></button>
+        <button class="icon-btn" id="modalDownload" aria-label="Download"><i data-lucide="download"></i></button>
+        <button class="icon-btn" id="modalDrive" aria-label="Open in Drive"><i data-lucide="external-link"></i></button>
+        <button class="icon-btn" id="modalClose" aria-label="Close"><i data-lucide="x"></i></button>
+      </div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- TOASTS -->
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="script.js"></script>
+<script>
+/* ===================================================================
+   Herlabol Visuals — app logic
+   Google Drive powered folder browser with preview, favorites &
+   direct download (no need to open Google Drive itself).
+=================================================================== */
+
+const DRIVE_API_KEY = 'AIzaSyCwsLuSGZEc4aXR_-nzE8IkTlvrPR6syls';
+
+const BUNDLES = {
+  motion:  { id: '1WQUBBlsRiJHPctv13ie7kI7ym72T12iz', name: '1500+ Motion Graphics Reels Bundle' },
+  editing: { id: '1k82acZh5FXtvW5tJAEpEqLnAKEmBR7Zz',  name: 'Editing Pack' },
+  graphic: { id: '1vADAyGoPX0IFibFNmlmPKp6kNRDUG9Cx',  name: 'Graphic Design Pack' },
+};
+
+const FOLDER_MIME = 'application/vnd.google-apps.folder';
+const SHORTCUT_MIME = 'application/vnd.google-apps.shortcut';
+
+/* ---------------- STATE ---------------- */
+const state = {
+  bundleKey: null,
+  stack: [],          // [{id, name}]
+  favorites: [],       // persisted list
+  cache: new Map(),    // folderId -> entries[]
+  currentEntries: []   // Raw list for active active search filtering
+};
+
+/* ---------------- UTILITIES ---------------- */
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+function mediaUrl(id) {
+  return `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${DRIVE_API_KEY}`;
+}
+function exportDownloadUrl(id) {
+  return `https://drive.google.com/uc?id=${id}&export=download`;
+}
+function driveViewUrl(entry) {
+  return entry.type === 'folder'
+    ? `https://drive.google.com/drive/folders/${entry.id}`
+    : `https://drive.google.com/file/d/${entry.id}/view?usp=drivesdk`;
+}
+
+function classify(mimeType, name) {
+  const ext = (name.split('.').pop() || '').toLowerCase();
+  if (mimeType === FOLDER_MIME) return 'folder';
+  if (mimeType.startsWith('image/')) return 'image';
+  if (mimeType.startsWith('video/')) return 'video';
+  if (mimeType.startsWith('audio/')) return 'audio';
+  if (mimeType === 'application/pdf') return 'pdf';
+  if (['ttf', 'otf', 'woff', 'woff2', 'eot'].includes(ext)) return 'font';
+  if (['zip', 'rar', '7z'].includes(ext)) return 'archive';
+  return 'other';
+}
+
+const ICONS = {
+  folder: 'folder', image: 'image', video: 'video', audio: 'music',
+  pdf: 'file-text', font: 'type', archive: 'archive', other: 'file',
+};
+
+function formatSize(bytes) {
+  if (!bytes) return '';
+  const n = Number(bytes);
+  if (n < 1024) return n + ' B';
+  if (n < 1024 ** 2) return (n / 1024).toFixed(1) + ' KB';
+  if (n < 1024 ** 2) return (n / 1024 ** 2).toFixed(1) + ' MB';
+  return (n / 1024 ** 3).toFixed(1) + ' GB';
+}
+
+function escapeHtml(s = '') {
+  return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+/* ---------------- TOASTS ---------------- */
+function toast(msg, opts = {}) {
+  const stack = $('#toastStack');
+  const el = document.createElement('div');
+  el.className = 'toast' + (opts.error ? ' err' : '');
+  el.innerHTML = `<i data-lucide="${opts.error ? 'alert-circle' : (opts.icon || 'check-circle')}"></i><span></span>`;
+  el.querySelector('span').textContent = msg;
+  stack.appendChild(el);
+  if (window.lucide) lucide.createIcons({ nodes: [el] });
+  setTimeout(() => {
+    el.classList.add('leaving');
+    setTimeout(() => el.remove(), 320);
+  }, 2600);
+}
+
+/* ---------------- FAVORITES (persisted via localStorage) ---------------- */
+const FAV_KEY = 'hlb_favorites_v1';
+
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAV_KEY);
+    state.favorites = raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    state.favorites = [];
+  }
+}
+function persistFavorites() {
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(state.favorites)); }
+  catch (e) { toast('Could not save favorite (storage blocked)', { error: true }); }
+  updateFavCount();
+}
+function isFavorited(id) {
+  return state.favorites.some(f => f.id === id);
+}
+function toggleFavorite(entry) {
+  const idx = state.favorites.findIndex(f => f.id === entry.id);
+  if (idx > -1) {
+    state.favorites.splice(idx, 1);
+    toast('Removed from favorites', { icon: 'star-off' });
+  } else {
+    state.favorites.unshift({
+      id: entry.id, name: entry.name, mimeType: entry.mimeType,
+      thumbnailLink: entry.thumbnailLink || null, type: entry.type,
+      bundleKey: state.bundleKey,
+    });
+    toast('Added to favorites', { icon: 'star' });
+  }
+  persistFavorites();
+  syncFavButtons(entry.id);
+  if ($('#favoritesOverlay').classList.contains('open')) renderFavorites();
+}
+function updateFavCount() {
+  $('#favCount').textContent = state.favorites.length;
+  $('#favCountMobile').textContent = state.favorites.length;
+}
+function syncFavButtons(id) {
+  $$(`.fav-btn[data-id="${id}"]`).forEach(btn => {
+    btn.classList.toggle('is-fav', isFavorited(id));
+  });
+  if ($('#modalFav').dataset.id === id) {
+    $('#modalFav').classList.toggle('is-fav', isFavorited(id));
+  }
+}
+
+/* ---------------- DRIVE API ---------------- */
+async function listFolder(folderId) {
+  if (state.cache.has(folderId)) return state.cache.get(folderId);
+
+  let files = [];
+  let pageToken = '';
+  const fields = 'nextPageToken, files(id,name,mimeType,size,thumbnailLink,shortcutDetails(targetId,targetMimeType))';
+  do {
+    const q = encodeURIComponent(`'${folderId}' in parents and trashed=false`);
+    const url = `https://www.googleapis.com/drive/v3/files?q=${q}&key=${DRIVE_API_KEY}&fields=${encodeURIComponent(fields)}&pageSize=200&orderBy=folder,name${pageToken ? '&pageToken=' + pageToken : ''}`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({}));
+      throw new Error(errBody?.error?.message || `Drive API error (${res.status})`);
+    }
+    const data = await res.json();
+    files = files.concat(data.files || []);
+    pageToken = data.nextPageToken || '';
+  } while (pageToken);
+
+  const entries = files.map(resolveEntry);
+  await hydrateShortcutThumbnails(entries);
+  state.cache.set(folderId, entries);
+  return entries;
+}
+
+/* Shortcuts don't carry the target file's thumbnailLink in the listing
+   response — only the shortcut object's own (usually empty) one. Fetch
+   the real target's thumbnailLink directly so previews render properly
+   instead of falling back to a plain type icon. */
+async function hydrateShortcutThumbnails(entries) {
+  const targets = entries.filter(e => e.isShortcut && !e.thumbnailLink && e.type !== 'folder');
+  if (!targets.length) return;
+  await Promise.all(targets.map(async (entry) => {
+    try {
+      const url = `https://www.googleapis.com/drive/v3/files/${entry.id}?fields=thumbnailLink&key=${DRIVE_API_KEY}`;
+      const res = await fetch(url);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.thumbnailLink) entry.thumbnailLink = data.thumbnailLink;
+    } catch (e) { /* silently keep icon fallback */ }
+  }));
+}
+
+function resolveEntry(file) {
+  const isShortcut = file.mimeType === SHORTCUT_MIME;
+  const realId = isShortcut ? (file.shortcutDetails?.targetId || file.id) : file.id;
+  const realMime = isShortcut ? (file.shortcutDetails?.targetMimeType || 'application/octet-stream') : file.mimeType;
+  return {
+    id: realId,
+    driveEntryId: file.id,
+    name: file.name,
+    mimeType: realMime,
+    thumbnailLink: file.thumbnailLink || null,
+    size: file.size || null,
+    isShortcut,
+    type: classify(realMime, file.name),
+  };
+}
+
+/* ---------------- BROWSER OVERLAY ---------------- */
+function openBundle(key) {
+  state.bundleKey = key;
+  state.stack = [{ id: BUNDLES[key].id, name: BUNDLES[key].name }];
+  $('#browserOverlay').classList.add('open');
+  $('#browserOverlay').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  resetSearchInput();
+  renderBreadcrumbs();
+  loadCurrentFolder();
+}
+function closeBrowser() {
+  $('#browserOverlay').classList.remove('open');
+  $('#browserOverlay').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  resetSearchInput();
+}
+function navigateInto(entry) {
+  state.stack.push({ id: entry.id, name: entry.name });
+  resetSearchInput();
+  renderBreadcrumbs();
+  loadCurrentFolder();
+}
+function navigateToCrumb(index) {
+  state.stack = state.stack.slice(0, index + 1);
+  resetSearchInput();
+  renderBreadcrumbs();
+  loadCurrentFolder();
+}
+function renderBreadcrumbs() {
+  const el = $('#breadcrumbs');
+  el.innerHTML = '';
+  state.stack.forEach((crumb, i) => {
+    if (i > 0) {
+      const sep = document.createElement('span');
+      sep.className = 'crumb-sep';
+      sep.textContent = '/';
+      el.appendChild(sep);
+    }
+    const btn = document.createElement('button');
+    const isLast = i === state.stack.length - 1;
+    btn.className = isLast ? 'current' : '';
+    if (i === 0) btn.innerHTML = `<i data-lucide="folder-open"></i><span>${escapeHtml(crumb.name)}</span>`;
+    else btn.innerHTML = `<span>${escapeHtml(crumb.name)}</span>`;
+    btn.addEventListener('click', () => navigateToCrumb(i));
+    el.appendChild(btn);
+  });
+  if (window.lucide) lucide.createIcons({ nodes: [el] });
+}
+
+async function loadCurrentFolder(force = false) {
+  const current = state.stack[state.stack.length - 1];
+  const grid = $('#fileGrid');
+  const status = $('#overlayStatus');
+  grid.innerHTML = '';
+  status.classList.remove('hidden');
+  status.innerHTML = `<div class="spinner"></div><span class="status-title">Loading folder…</span>`;
+
+  if (force) state.cache.delete(current.id);
+
+  try {
+    const entries = await listFolder(current.id);
+    state.currentEntries = entries; // Save globally for searching
+    status.classList.add('hidden');
+    if (!entries.length) {
+      status.classList.remove('hidden');
+      status.innerHTML = `<i data-lucide="inbox"></i><span class="status-title">This folder is empty</span>`;
+      if (window.lucide) lucide.createIcons({ nodes: [status] });
+      return;
+    }
+    renderFileGrid(entries, grid, { navigable: true });
+  } catch (err) {
+    status.classList.remove('hidden');
+    status.innerHTML = `<i data-lucide="alert-triangle"></i><span class="status-title">Couldn't load this folder</span><span style="font-size:.82rem;color:var(--text-faint)">${escapeHtml(err.message)}</span>`;
+    if (window.lucide) lucide.createIcons({ nodes: [status] });
+  }
+}
+
+/* ---------------- SEARCH FUNCTIONALITY ---------------- */
+function initSearch() {
+  const searchInput = $('#overlaySearch');
+  const clearBtn = $('#clearSearch');
+
+  searchInput.addEventListener('input', (e) => {
+    const value = e.target.value.trim().toLowerCase();
+    const grid = $('#fileGrid');
+    const status = $('#overlayStatus');
+
+    if (value.length > 0) {
+      clearBtn.style.display = 'flex';
+    } else {
+      clearBtn.style.display = 'none';
+    }
+
+    // Filter local entries instantly
+    const filtered = state.currentEntries.filter(entry => 
+      entry.name.toLowerCase().includes(value)
+    );
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '';
+      status.classList.remove('hidden');
+      status.innerHTML = `<i data-lucide="search-code"></i><span class="status-title">No matching results found</span><span style="font-size:.85rem;color:var(--text-faint)">Try looking for something else.</span>`;
+      if (window.lucide) lucide.createIcons({ nodes: [status] });
+    } else {
+      status.classList.add('hidden');
+      renderFileGrid(filtered, grid, { navigable: true });
+    }
+  });
+
+  clearBtn.addEventListener('click', resetSearchInput);
+}
+
+function resetSearchInput() {
+  const searchInput = $('#overlaySearch');
+  const clearBtn = $('#clearSearch');
+  if(searchInput) {
+    searchInput.value = '';
+    clearBtn.style.display = 'none';
+    const status = $('#overlayStatus');
+    const grid = $('#fileGrid');
+    if (status && state.currentEntries.length > 0) {
+      status.classList.add('hidden');
+      renderFileGrid(state.currentEntries, grid, { navigable: true });
+    }
+  }
+}
+
+/* ---------------- RENDER FILE GRID (shared by browser + favorites) ---------------- */
+function renderFileGrid(entries, container, { navigable = false } = {}) {
+  container.innerHTML = '';
+  entries.forEach((entry, i) => {
+    const card = document.createElement('div');
+    card.className = `file-card type-${entry.type}`;
+    card.style.animationDelay = `${Math.min(i * 30, 400)}ms`;
+
+    const thumbInner = entry.thumbnailLink
+      ? `<img src="${entry.thumbnailLink.replace(/=s\d+$/, '=s400')}" alt="" loading="lazy" onerror="this.remove()">`
+      : '';
+
+    const showPlay = entry.type !== 'folder';
+
+    card.innerHTML = `
+      <div class="file-thumb" data-role="thumb">
+        ${thumbInner}
+        <i data-lucide="${ICONS[entry.type]}" class="type-icon" ${entry.thumbnailLink ? 'style="display:none"' : ''}></i>
+        ${showPlay ? `<div class="play-hint"><i data-lucide="${entry.type === 'folder' ? 'folder-open' : 'eye'}"></i></div>` : ''}
+        ${entry.isShortcut ? `<span class="shortcut-badge"><i data-lucide="corner-up-right"></i>Shortcut</span>` : ''}
+      </div>
+      <div class="file-info">
+        <div class="file-name" title="${escapeHtml(entry.name)}">${escapeHtml(entry.name)}</div>
+        <div class="file-meta">${entry.type === 'folder' ? 'Folder' : (entry.type + (entry.size ? ' · ' + formatSize(entry.size) : ''))}</div>
+      </div>
+      <div class="file-actions">
+        ${entry.type !== 'folder' ? `
+          <button class="icon-btn fav-btn ${isFavorited(entry.id) ? 'is-fav' : ''}" data-id="${entry.id}" title="Favorite">
+            <i data-lucide="star"></i>
+          </button>
+          <button class="icon-btn preview-btn" title="Preview"><i data-lucide="eye"></i></button>
+          <button class="icon-btn download-btn" title="Download"><i data-lucide="download"></i></button>
+          <button class="icon-btn drive-btn" title="Open in Drive"><i data-lucide="external-link"></i></button>
+        ` : `
+          <button class="icon-btn fav-btn ${isFavorited(entry.id) ? 'is-fav' : ''}" data-id="${entry.id}" title="Favorite folder">
+            <i data-lucide="star"></i>
+          </button>
+          <button class="icon-btn open-folder-btn" title="Open folder"><i data-lucide="arrow-right"></i></button>
+          <button class="icon-btn drive-btn" title="Open in Drive"><i data-lucide="external-link"></i></button>
+        `}
+      </div>
+    `;
+
+    // Thumb click / open behaviour
+    const thumb = card.querySelector('[data-role="thumb"]');
+    thumb.addEventListener('click', () => {
+      if (entry.type === 'folder') {
+        if (navigable) navigateInto(entry);
+        else openFavoriteFolder(entry);
+      } else {
+        openPreview(entry);
+      }
+    });
+
+    const openFolderBtn = card.querySelector('.open-folder-btn');
+    if (openFolderBtn) openFolderBtn.addEventListener('click', () => {
+      if (navigable) navigateInto(entry);
+      else openFavoriteFolder(entry);
+    });
+
+    const previewBtn = card.querySelector('.preview-btn');
+    if (previewBtn) previewBtn.addEventListener('click', () => openPreview(entry));
+
+    const downloadBtn = card.querySelector('.download-btn');
+    if (downloadBtn) downloadBtn.addEventListener('click', (e) => { e.stopPropagation(); downloadFile(entry); });
+
+    const driveBtn = card.querySelector('.drive-btn');
+    if (driveBtn) driveBtn.addEventListener('click', (e) => { e.stopPropagation(); window.open(driveViewUrl(entry), '_blank', 'noopener'); });
+
+    const favBtn = card.querySelector('.fav-btn');
+    if (favBtn) favBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFavorite(entry); });
+
+    container.appendChild(card);
+  });
+
+  if (window.lucide) lucide.createIcons({ nodes: [container] });
+}
+
+function openFavoriteFolder(entry) {
+  // Navigate into a favorited folder inside the browser overlay
+  closeFavorites();
+  state.bundleKey = entry.bundleKey || state.bundleKey;
+  state.stack = [{ id: entry.id, name: entry.name }];
+  $('#browserOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  resetSearchInput();
+  renderBreadcrumbs();
+  loadCurrentFolder();
+}
+
+/* ---------------- FAVORITES OVERLAY ---------------- */
+function openFavorites() {
+  $('#favoritesOverlay').classList.add('open');
+  $('#favoritesOverlay').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  renderFavorites();
+}
+function closeFavorites() {
+  $('#favoritesOverlay').classList.remove('open');
+  $('#favoritesOverlay').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+function renderFavorites() {
+  const grid = $('#favoritesGrid');
+  if (!state.favorites.length) {
+    grid.innerHTML = `<div class="overlay-status" style="grid-column:1/-1">
+      <i data-lucide="star-off"></i>
+      <span class="status-title">No favorites yet</span>
+      <span style="font-size:.85rem;color:var(--text-faint)">Tap the star on any file to save it here — it stays saved even after reload.</span>
+    </div>`;
+    if (window.lucide) lucide.createIcons({ nodes: [grid] });
+    return;
+  }
+  renderFileGrid(state.favorites, grid, { navigable: false });
+}
+
+/* ---------------- PREVIEW MODAL ---------------- */
+function openPreview(entry) {
+  const modal = $('#previewModal');
+  const body = $('#modalBody');
+  $('#modalName').textContent = entry.name;
+  $('#modalFav').dataset.id = entry.id;
+  $('#modalFav').classList.toggle('is-fav', isFavorited(entry.id));
+  body.innerHTML = '';
+
+  const url = mediaUrl(entry.id);
+
+  switch (entry.type) {
+    case 'image':
+      body.innerHTML = `<img src="${url}" alt="${escapeHtml(entry.name)}">`;
+      break;
+    case 'video':
+      body.innerHTML = `<video src="${url}" controls autoplay playsinline></video>`;
+      break;
+    case 'audio':
+      body.innerHTML = `
+        <div style="width:100%;text-align:center;">
+          <i data-lucide="music" style="width:60px;height:60px;color:var(--teal);margin-bottom:18px;"></i>
+          <audio src="${url}" controls autoplay style="width:100%"></audio>
+        </div>`;
+      break;
+    case 'pdf':
+      body.innerHTML = `<iframe src="${url}" title="${escapeHtml(entry.name)}"></iframe>`;
+      break;
+    case 'font': {
+      const fam = 'preview_' + entry.id.replace(/[^a-zA-Z0-9]/g, '');
+      body.innerHTML = `
+        <div class="font-preview">
+          <div class="sample-lg" style="font-family:'${fam}', sans-serif;">Herlabol Visuals</div>
+          <div class="sample-sm" style="font-family:'${fam}', sans-serif;">The quick brown fox jumps over the lazy dog — 0123456789</div>
+        </div>`;
+      const ff = new FontFace(fam, `url(${url})`);
+      ff.load().then(loaded => { document.fonts.add(loaded); }).catch(() => {
+        toast('Font preview not supported for this file', { error: true });
+      });
+      break;
+    }
+    default:
+      body.innerHTML = `
+        <div class="unsupported-preview">
+          <i data-lucide="file"></i>
+          <span>Live preview isn't available for this file type.</span>
+          <button class="btn btn-primary btn-sm" id="inlineDownload"><i data-lucide="download"></i><span>Download instead</span></button>
+        </div>`;
+      body.querySelector('#inlineDownload')?.addEventListener('click', () => downloadFile(entry));
+  }
+
+  if (window.lucide) lucide.createIcons({ nodes: [body] });
+
+  $('#modalDownload').onclick = () => downloadFile(entry);
+  $('#modalDrive').onclick = () => window.open(driveViewUrl(entry), '_blank', 'noopener');
+  $('#modalFav').onclick = () => toggleFavorite(entry);
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+}
+function closePreview() {
+  const modal = $('#previewModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  // stop media playback
+  $$('video, audio', $('#modalBody')).forEach(m => { m.pause(); m.src = ''; });
+}
+
+/* ---------------- DOWNLOAD (single click, no Drive UI) ---------------- */
+async function downloadFile(entry) {
+  toast(`Downloading “${entry.name}”…`, { icon: 'download' });
+  try {
+    const res = await fetch(mediaUrl(entry.id));
+    if (!res.ok) throw new Error('Direct download blocked');
+    const blob = await res.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = entry.name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 8000);
+    toast(`“${entry.name}” downloaded`, { icon: 'check-circle' });
+  } catch (err) {
+    window.open(exportDownloadUrl(entry.id), '_blank', 'noopener');
+    toast('Started via Drive download link', { icon: 'download' });
+  }
+}
+
+/* ---------------- SCROLL REVEAL ---------------- */
+function initReveal() {
+  const targets = $$('[data-reveal]');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  targets.forEach(t => io.observe(t));
+}
+
+/* ---------------- NAV / MOBILE MENU ---------------- */
+function initNav() {
+  const hamburger = $('#hamburger');
+  const mobileMenu = $('#mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+  $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+  }));
+
+  const nav = $('#nav .nav-inner');
+  window.addEventListener('scroll', () => {
+    nav.style.borderColor = window.scrollY > 40 ? 'var(--border-hi)' : 'var(--border)';
+  }, { passive: true });
+}
+
+/* ---------------- INIT ---------------- */
+function init() {
+  $('#year').textContent = new Date().getFullYear();
+  loadFavorites();
+  updateFavCount();
+
+  if (window.lucide) lucide.createIcons();
+
+  initNav();
+  initReveal();
+  initSearch(); // Search initializes here
+
+  $$('.open-bundle').forEach(btn => {
+    btn.addEventListener('click', () => openBundle(btn.dataset.bundle));
+  });
+
+  $('#closeBrowser').addEventListener('click', closeBrowser);
+  $('#refreshFolder').addEventListener('click', () => loadCurrentFolder(true));
+
+  $('#favNavBtn').addEventListener('click', openFavorites);
+  $('#favNavBtnMobile').addEventListener('click', () => {
+    $('#mobileMenu').classList.remove('open');
+    $('#hamburger').classList.remove('open');
+    openFavorites();
+  });
+  $('#closeFavorites').addEventListener('click', closeFavorites);
+
+  $('#modalClose').addEventListener('click', closePreview);
+  $('#modalBackdrop').addEventListener('click', closePreview);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closePreview();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
+</script>
+</body>
+</html>
